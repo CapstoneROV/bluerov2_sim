@@ -3,7 +3,7 @@
     <arg name="halfpi" value="1.57079632679"/>
     <arg name="static_odom" value="False"/>
     <arg name="use_joystick" default="true" doc="Enable Joystick Support"/>
-    <arg name="gazebo" default="false" doc="Enable Gazebo for Camera Visualization (no physics)"/>
+    <arg name="gazebo" default="true" doc="Enable Gazebo for Camera Visualization (no physics)"/>
     <arg name="mode" default="default" doc="Mode to load into gazebo."/>
 
     <include file="$(find bluerov2_ardusub)/launch/start_ardusub_sitl.launch">

@@ -27,7 +27,10 @@
     <rosparam command="load" file="$(arg config_yaml)"/>
   </node>
 
-  <node pkg="bluerov2_control" type="sitl_model_state_publisher.py" name="pose2gazebo" if="$(arg gazebo)" ns="bluerov2">
+  <node pkg="bluerov2_control" type="sitl_model_state_publisher_pid.py" name="pose2gazebo" if="$(arg gazebo)" ns="bluerov2">
+    <param name="kp" value="10"/>
+    <param name="kd" value="0"/>
+    <param name="ki" value="0"/>
   </node>
 
   <node pkg="rosservice" type="rosservice" name="mavros_set_stream" args="call --wait /bluerov2/mavros/set_stream_rate 0 10 1"/>
