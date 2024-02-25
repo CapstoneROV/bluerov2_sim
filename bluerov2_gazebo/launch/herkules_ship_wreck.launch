@@ -14,7 +14,7 @@
   </include>
 
   <group if="$(arg use_world_ned_frame)">
-    <include file="$(find uuv_assistants)/launch/publish_world_ned_frame.launch"/>
+    <include file="$(find bluerov2_gazebo)/launch/publish_world_ned_frame.launch"/>
   </group>
   
   <node name="publish_world_models"

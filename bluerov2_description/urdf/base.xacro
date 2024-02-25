@@ -85,11 +85,16 @@
             <mesh filename="${collision_mesh_file}" scale="1 1 1" />
           </geometry>
         </collision>
-
       </link>
 
     <gazebo reference="${namespace}/base_link">
       <selfCollide>false</selfCollide>
+      <!-- IMU SITL SENSOR -->
+      <sensor type="imu" name="imu_sensor">
+        <pose>0 0 0 0 0 0</pose>
+        <always_on>true</always_on>
+        <update_rate>1000.0</update_rate>
+      </sensor>
     </gazebo>
 
     <!-- Set up hydrodynamic plugin given as input parameter -->
@@ -101,5 +106,7 @@
     <!-- Include the sensor modules: 3D Pose, IMU, Pressure, Camera -->
     <xacro:include filename="$(find bluerov2_description)/urdf/sensors.xacro"/>
 
+    <!-- Include Ardusub SITL, this will apply forces and torques to the vehicle based on the delta x from sim_vehicle.py -->
+    <xacro:include filename="$(find bluerov2_description)/urdf/sitl.xacro"/>
   </xacro:macro>
 </robot>
