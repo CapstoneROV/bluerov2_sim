@@ -32,8 +32,8 @@
             <i_min>0</i_min>
             <cmd_max>51</cmd_max>
             <cmd_min>-40</cmd_min>
-            <linkName>bluerov2::bluerov2/thruster_sitl_0</linkName>
-            <jointName>bluerov2::bluerov2/thruster_sitl_0_joint</jointName>
+            <linkName>bluerov2/thruster_sitl_0</linkName>
+            <jointName>bluerov2/thruster_sitl_0_joint</jointName>
             <multiplier>102</multiplier>
             </control>
 
@@ -47,8 +47,8 @@
             <i_min>0</i_min>
             <cmd_max>51</cmd_max>
             <cmd_min>-40</cmd_min>
-            <linkName>bluerov2::bluerov2/thruster_sitl_1</linkName>
-            <jointName>bluerov2::bluerov2/thruster_sitl_1_joint</jointName>
+            <linkName>bluerov2/thruster_sitl_1</linkName>
+            <jointName>bluerov2/thruster_sitl_1_joint</jointName>
             <multiplier>102</multiplier>
             </control>
 
@@ -62,8 +62,8 @@
             <i_min>0</i_min>
             <cmd_max>51</cmd_max>
             <cmd_min>-40</cmd_min>
-            <linkName>bluerov2::bluerov2/thruster_sitl_2</linkName>
-            <jointName>bluerov2::bluerov2/thruster_sitl_2_joint</jointName>
+            <linkName>bluerov2/thruster_sitl_2</linkName>
+            <jointName>bluerov2/thruster_sitl_2_joint</jointName>
             <multiplier>102</multiplier>
             </control>
 
@@ -77,8 +77,8 @@
             <i_min>0</i_min>
             <cmd_max>51</cmd_max>
             <cmd_min>-40</cmd_min>
-            <linkName>bluerov2::bluerov2/thruster_sitl_3</linkName>
-            <jointName>bluerov2::bluerov2/thruster_sitl_3_joint</jointName>
+            <linkName>bluerov2/thruster_sitl_3</linkName>
+            <jointName>bluerov2/thruster_sitl_3_joint</jointName>
             <multiplier>102</multiplier>
             </control>
 
@@ -93,8 +93,8 @@
             <i_min>0</i_min>
             <cmd_max>51</cmd_max>
             <cmd_min>-40</cmd_min>
-            <linkName>bluerov2::bluerov2/thruster_sitl_4</linkName>
-            <jointName>bluerov2::bluerov2/thruster_sitl_4_joint</jointName>
+            <linkName>bluerov2/thruster_sitl_4</linkName>
+            <jointName>bluerov2/thruster_sitl_4_joint</jointName>
             <multiplier>102</multiplier>
             </control>
 
@@ -108,8 +108,8 @@
             <i_min>0</i_min>
             <cmd_max>51</cmd_max>
             <cmd_min>-40</cmd_min>
-            <linkName>bluerov2::bluerov2/thruster_sitl_5</linkName>
-            <jointName>bluerov2::bluerov2/thruster_sitl_5_joint</jointName>
+            <linkName>bluerov2/thruster_sitl_5</linkName>
+            <jointName>bluerov2/thruster_sitl_5_joint</jointName>
             <multiplier>102</multiplier>
             </control>
         </plugin>
