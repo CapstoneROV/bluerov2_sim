@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="bluerov2_control" type="mavlink_test.py" name="mavlink_test" ns="bluerov2" />
+</launch>

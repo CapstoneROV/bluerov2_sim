@@ -26,9 +26,9 @@
         <include file="$(find bluerov2_description)/launch/upload.launch">
             <!-- NOTE DO NOT CHANGE X,Y,Z. TODO make a static transform publisher for pid -->
             <arg name="x" default="0"/>
-            <arg name="y" default="-20"/>
+            <arg name="y" default="0"/>
             <arg name="z" default="-50"/>
-            <arg name="yaw" default="0.0"/>
+            <arg name="yaw" default="3.141592653589793"/>
             <arg name="use_ned_frame" value="true"/>
             <arg name="use_geodetic" value="false"/>
             <arg name="mode" value="$(arg mode)"/>
