@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="gui" default="true"/>
+  <arg name="use_world_ned_frame" default="true"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find bluerov2_gazebo)/worlds/earth_colored_bluerov2.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+    <arg name="verbose" value="true" />
+  </include>
+
+  <group if="$(arg use_world_ned_frame)">
+    <include file="$(find bluerov2_gazebo)/launch/publish_world_ned_frame.launch"/>
+  </group>
+  
+  <node name="publish_world_models"
+        pkg="uuv_assistants"
+        type="publish_world_models.py"
+        output="screen">
+        <rosparam subst_value="true">
+            meshes:
+                earth_colored:
+                    mesh: package://simulation_worlds/models/earth_colored/meshes/earth_colored.dae
+                    pose:
+                      position: [0, 0, 0]
+                    <!-- scale: [1, 1, 1] -->
+        </rosparam>
+  </node>
+</launch>

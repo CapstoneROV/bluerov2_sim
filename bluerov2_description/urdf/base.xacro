@@ -7,7 +7,7 @@
   <!-- Loading vehicle's specific macros -->
   <xacro:include filename="$(find bluerov2_description)/urdf/snippets.xacro"/>
   <!-- Loading sonar macros -->
-  <xacro:include filename="$(find sonar_testing)/model/sonars.urdf.xacro"/>
+  <xacro:include filename="$(find sonar_testing)/models/sonars.urdf.xacro"/>
 
   <!-- ADDED  -->
   <xacro:include filename="$(find uuv_gazebo_ros_plugins)/urdf/snippets.xacro"/>
