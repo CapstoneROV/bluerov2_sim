@@ -18,7 +18,7 @@
         <!--
             incoming control command [0, 1]
             so offset it by -0.5 to get [-0.5, 0.5].
-            multiplier = 55
+            multiplier = 75
             Positive thrust = 51
             Negative thrust = -41
         -->
@@ -26,7 +26,7 @@
             <type>EFFORT</type>
             <offset>-0.5</offset>
             <p_gain>1</p_gain>
-            <i_gain>0.1</i_gain>
+            <i_gain>0</i_gain>
             <d_gain>0</d_gain>
             <i_max>0</i_max>
             <i_min>0</i_min>
@@ -34,14 +34,14 @@
             <cmd_min>-40</cmd_min>
             <linkName>bluerov2/thruster_sitl_0</linkName>
             <jointName>bluerov2/thruster_sitl_0_joint</jointName>
-            <multiplier>55</multiplier>
+            <multiplier>75</multiplier>
             </control>
 
             <control channel="1">
             <type>EFFORT</type>
             <offset>-0.5</offset>
             <p_gain>1</p_gain>
-            <i_gain>0.1</i_gain>
+            <i_gain>0</i_gain>
             <d_gain>0</d_gain>
             <i_max>0</i_max>
             <i_min>0</i_min>
@@ -49,14 +49,14 @@
             <cmd_min>-40</cmd_min>
             <linkName>bluerov2/thruster_sitl_1</linkName>
             <jointName>bluerov2/thruster_sitl_1_joint</jointName>
-            <multiplier>55</multiplier>
+            <multiplier>75</multiplier>
             </control>
 
             <control channel="2">
             <type>EFFORT</type>
             <offset>-0.5</offset>
             <p_gain>1</p_gain>
-            <i_gain>0.1</i_gain>
+            <i_gain>0</i_gain>
             <d_gain>0</d_gain>
             <i_max>0</i_max>
             <i_min>0</i_min>
@@ -64,14 +64,14 @@
             <cmd_min>-40</cmd_min>
             <linkName>bluerov2/thruster_sitl_2</linkName>
             <jointName>bluerov2/thruster_sitl_2_joint</jointName>
-            <multiplier>55</multiplier>
+            <multiplier>75</multiplier>
             </control>
 
             <control channel="3">
             <type>EFFORT</type>
             <offset>-0.5</offset>
             <p_gain>1</p_gain>
-            <i_gain>0.1</i_gain>
+            <i_gain>0</i_gain>
             <d_gain>0</d_gain>
             <i_max>0</i_max>
             <i_min>0</i_min>
@@ -79,7 +79,7 @@
             <cmd_min>-40</cmd_min>
             <linkName>bluerov2/thruster_sitl_3</linkName>
             <jointName>bluerov2/thruster_sitl_3_joint</jointName>
-            <multiplier>55</multiplier>
+            <multiplier>75</multiplier>
             </control>
 
 
@@ -87,7 +87,7 @@
             <type>EFFORT</type>
             <offset>-0.5</offset>
             <p_gain>1</p_gain>
-            <i_gain>0.1</i_gain>
+            <i_gain>0</i_gain>
             <d_gain>0</d_gain>
             <i_max>0</i_max>
             <i_min>0</i_min>
@@ -95,14 +95,14 @@
             <cmd_min>-40</cmd_min>
             <linkName>bluerov2/thruster_sitl_4</linkName>
             <jointName>bluerov2/thruster_sitl_4_joint</jointName>
-            <multiplier>55</multiplier>
+            <multiplier>75</multiplier>
             </control>
 
             <control channel="5">
             <type>EFFORT</type>
             <offset>-0.5</offset>
             <p_gain>1</p_gain>
-            <i_gain>0.1</i_gain>
+            <i_gain>0</i_gain>
             <d_gain>0</d_gain>
             <i_max>0</i_max>
             <i_min>0</i_min>
@@ -110,7 +110,7 @@
             <cmd_min>-40</cmd_min>
             <linkName>bluerov2/thruster_sitl_5</linkName>
             <jointName>bluerov2/thruster_sitl_5_joint</jointName>
-            <multiplier>55</multiplier>
+            <multiplier>75</multiplier>
             </control>
         </plugin>
     </gazebo>
