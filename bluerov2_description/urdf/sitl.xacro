@@ -18,7 +18,7 @@
         <!--
             incoming control command [0, 1]
             so offset it by -0.5 to get [-0.5, 0.5].
-            multiplier = 75
+            multiplier = 50
             Positive thrust = 51
             Negative thrust = -41
         -->
@@ -34,7 +34,7 @@
             <cmd_min>-40</cmd_min>
             <linkName>bluerov2/thruster_sitl_0</linkName>
             <jointName>bluerov2/thruster_sitl_0_joint</jointName>
-            <multiplier>75</multiplier>
+            <multiplier>50</multiplier>
             </control>
 
             <control channel="1">
@@ -49,7 +49,7 @@
             <cmd_min>-40</cmd_min>
             <linkName>bluerov2/thruster_sitl_1</linkName>
             <jointName>bluerov2/thruster_sitl_1_joint</jointName>
-            <multiplier>75</multiplier>
+            <multiplier>50</multiplier>
             </control>
 
             <control channel="2">
@@ -64,7 +64,7 @@
             <cmd_min>-40</cmd_min>
             <linkName>bluerov2/thruster_sitl_2</linkName>
             <jointName>bluerov2/thruster_sitl_2_joint</jointName>
-            <multiplier>75</multiplier>
+            <multiplier>50</multiplier>
             </control>
 
             <control channel="3">
@@ -79,7 +79,7 @@
             <cmd_min>-40</cmd_min>
             <linkName>bluerov2/thruster_sitl_3</linkName>
             <jointName>bluerov2/thruster_sitl_3_joint</jointName>
-            <multiplier>75</multiplier>
+            <multiplier>50</multiplier>
             </control>
 
 
@@ -95,7 +95,7 @@
             <cmd_min>-40</cmd_min>
             <linkName>bluerov2/thruster_sitl_4</linkName>
             <jointName>bluerov2/thruster_sitl_4_joint</jointName>
-            <multiplier>75</multiplier>
+            <multiplier>50</multiplier>
             </control>
 
             <control channel="5">
@@ -110,7 +110,7 @@
             <cmd_min>-40</cmd_min>
             <linkName>bluerov2/thruster_sitl_5</linkName>
             <jointName>bluerov2/thruster_sitl_5_joint</jointName>
-            <multiplier>75</multiplier>
+            <multiplier>50</multiplier>
             </control>
         </plugin>
     </gazebo>
