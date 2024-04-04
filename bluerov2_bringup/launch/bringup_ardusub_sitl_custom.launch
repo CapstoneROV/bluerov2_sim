@@ -2,7 +2,7 @@
     <!-- USED BY UUV SENSORS.XACRO -->
     <arg name="pi" value="3.14159265359"/>
     <arg name="halfpi" value="1.57079632679"/>
-    <arg name="static_odom" value="False"/>
+    <arg name="use_world_ned_frame" default="true" doc="Use NED Frame for World and ROV"/>
     <arg name="use_keyboard" default="false" doc="Enable Joystick Support"/>
     <arg name="gazebo" default="true" doc="Enable Gazebo for Camera Visualization (no physics)"/>
     <arg name="mode" default="default" doc="Mode to load into gazebo."/>
@@ -19,7 +19,7 @@
     <include file="$(find bluerov2_gazebo)/launch/herkules_ship_wreck.launch">
         <arg name="paused" value="false"/>
         <arg name="gui" value="true"/>
-        <arg name="use_world_ned_frame" value="true"/>
+        <arg name="use_world_ned_frame" value="$(arg use_world_ned_frame)"/>
     </include>
 
     <group if="$(arg gazebo)">
@@ -27,9 +27,9 @@
             <!-- NOTE DO NOT CHANGE X,Y,Z. TODO make a static transform publisher for pid -->
             <arg name="x" default="5"/>
             <arg name="y" default="5"/>
-            <arg name="z" default="-50"/>
+            <arg name="z" default="-58"/>
             <arg name="yaw" default="3.141592653589793"/>
-            <arg name="use_ned_frame" value="true"/>
+            <arg name="use_ned_frame" value="$(arg use_world_ned_frame)"/>
             <arg name="use_geodetic" value="false"/>
             <arg name="mode" value="$(arg mode)"/>
             <arg name="gazebo_tf" value="true"/>
