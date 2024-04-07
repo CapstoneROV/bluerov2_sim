@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- Adding the thruster units with the macro created in snippets.xacro -->
+  <!--
+    Important:
+    - The thruster IDs must be given as integers and must be unique to each thruster unit
+    - The thruster pose in the <origin> block is relative to the body's center of mass. Be
+    aware that Gazebo does not use the SNAME convention per default.
+  -->
+
+  <!-- Thrusters for SITL to apply forces to -->
+  <!-- Courtesy of NYUAD Robosub https://github.com/nyuad-robosub/bluerov2/tree/5ecac19e27db1d43a663141c8704355a17c1abf3 -->
+  <!-- AND https://github.com/clydemcqueen/bluerov2_ignition/blob/main/models/bluerov2_heavy/model.sdf -->
+  <xacro:macro name="thruster_sitl_macro" params="robot_namespace thruster_id *origin">
+    <link name="${robot_namespace}/thruster_sitl_${thruster_id}">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.0001"/>
+        <inertia ixx="0.00000002" ixy="0.0" ixz="0.0" iyy="0.00000002" iyz="0.0" izz="0.00000002"/>
+      </inertial>
+    </link>
+    <joint name="${robot_namespace}/thruster_sitl_${thruster_id}_joint" type="revolute">
+      <xacro:insert_block name="origin" />
+      <axis xyz="1 0 0" />
+      <limit effort="0.0" upper="0.0" lower="0.0" velocity="0.0"/>
+      <parent link="${robot_namespace}/base_link" />
+      <child link="${robot_namespace}/thruster_sitl_${thruster_id}" />
+    </joint>
+    <gazebo reference="${robot_namespace}/thruster_sitl_${thruster_id}">
+      <selfCollide>false</selfCollide>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:thruster_macro robot_namespace="${namespace}" thruster_id="0">
+    <origin xyz="0.0 0.0 0.0" rpy="-1.571 0.0 0.0"/>
+  </xacro:thruster_macro>
+  <xacro:thruster_sitl_macro robot_namespace="${namespace}" thruster_id="0">
+    <origin xyz="0.14 -0.092 0.0" rpy="-1.571 1.571 -0.785"/>
+  </xacro:thruster_sitl_macro>
+
+  <xacro:thruster_macro robot_namespace="${namespace}" thruster_id="1">
+    <origin xyz="0.0 0.0 0.0" rpy="-1.571 0.0 0.0"/>
+  </xacro:thruster_macro>
+  <xacro:thruster_sitl_macro robot_namespace="${namespace}" thruster_id="1">
+    <origin xyz="0.14 0.092 0.0" rpy="-1.571 1.571 -2.356"/>
+  </xacro:thruster_sitl_macro>
+
+  <xacro:thruster_macro robot_namespace="${namespace}" thruster_id="2">
+    <origin xyz="0.0 0.0 0.0" rpy="1.571 0.0 0.0"/>
+  </xacro:thruster_macro>
+  <xacro:thruster_sitl_macro robot_namespace="${namespace}" thruster_id="2">
+    <origin xyz="-0.15 -0.092 0.0" rpy="-1.571 1.571 0.785"/>
+  </xacro:thruster_sitl_macro>
+
+  <xacro:thruster_macro robot_namespace="${namespace}" thruster_id="3">
+    <origin xyz="0.0 0.0 0.0" rpy="1.571 0 0"/>
+  </xacro:thruster_macro>
+  <xacro:thruster_sitl_macro robot_namespace="${namespace}" thruster_id="3">
+    <origin xyz="-0.15 0.092 0.0" rpy="-1.571 1.571 2.356"/>
+  </xacro:thruster_sitl_macro>
+
+  <xacro:thruster_macro robot_namespace="${namespace}" thruster_id="4">
+    <origin xyz="0.0 0.0 0.0" rpy="-1.571 0 1.571"/>
+  </xacro:thruster_macro>
+  <xacro:thruster_sitl_macro robot_namespace="${namespace}" thruster_id="4">
+    <origin xyz="0.118 -0.215 0.064" rpy="0.0 0.0 0.0"/>
+  </xacro:thruster_sitl_macro>
+
+  <xacro:thruster_macro robot_namespace="${namespace}" thruster_id="5">
+    <origin xyz="0.0 0.0 0.0" rpy="1.571 0 1.571"/>
+  </xacro:thruster_macro>
+  <xacro:thruster_sitl_macro robot_namespace="${namespace}" thruster_id="5">
+    <origin xyz="0.118 0.215 0.064" rpy="0.0 0.0 0.0"/>
+  </xacro:thruster_sitl_macro>
+
+  <xacro:thruster_macro robot_namespace="${namespace}" thruster_id="6">
+      <origin xyz="0.0 0.0 0.0" rpy="1.571 0 1.571"/>
+  </xacro:thruster_macro>
+  <xacro:thruster_sitl_macro robot_namespace="${namespace}" thruster_id="6">
+    <origin xyz="-0.118 -0.215 0.064" rpy="0.0 0.0 0.0"/>
+  </xacro:thruster_sitl_macro>
+
+  <xacro:thruster_macro robot_namespace="${namespace}" thruster_id="7">
+    <origin xyz="0.0 0.0 0.0" rpy="-1.571 0 1.571"/>
+  </xacro:thruster_macro>
+  <xacro:thruster_sitl_macro robot_namespace="${namespace}" thruster_id="7">
+    <origin xyz="-0.118 0.215 0.064" rpy="0.0 0.0 0.0"/>
+  </xacro:thruster_sitl_macro>
+
+</robot>

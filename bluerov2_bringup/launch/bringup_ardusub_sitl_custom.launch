@@ -27,7 +27,7 @@
             <!-- NOTE DO NOT CHANGE X,Y,Z. TODO make a static transform publisher for pid -->
             <arg name="x" default="5"/>
             <arg name="y" default="5"/>
-            <arg name="z" default="-58"/>
+            <arg name="z" default="-20"/>
             <arg name="yaw" default="3.141592653589793"/>
             <arg name="use_ned_frame" value="$(arg use_world_ned_frame)"/>
             <arg name="use_geodetic" value="false"/>

@@ -35,29 +35,29 @@
   <group ns="$(arg namespace)">
     <group if="$(arg use_ned_frame)">
       <param name="robot_description"
-             command="$(find xacro)/xacro '$(find bluerov2_description)/robots/$(arg mode).xacro' --inorder
+             command="$(find xacro)/xacro '$(find bluerov2_description_heavy)/robots/$(arg mode).xacro' --inorder
                       debug:=$(arg debug)
                       namespace:=$(arg namespace)
                       inertial_reference_frame:=world_ned" />
         
       <!-- Enable Sonar Pointcloud Generation-->
-      <include file="$(find sonar_testing)/launch/sonar_pointcloud.launch">
+      <!-- <include file="$(find sonar_testing)/launch/sonar_pointcloud.launch">
         <arg name="namespace" value="$(arg namespace)"/>
         <arg name="world_frame" value="world_ned"/>
-      </include>
+      </include> -->
     </group>
 
     <group unless="$(arg use_ned_frame)">
       <param name="robot_description"
-             command="$(find xacro)/xacro '$(find bluerov2_description)/robots/$(arg mode).xacro' --inorder
+             command="$(find xacro)/xacro '$(find bluerov2_description_heavy)/robots/$(arg mode).xacro' --inorder
                       debug:=$(arg debug)
                       namespace:=$(arg namespace)
                       inertial_reference_frame:=world" />
       <!-- Enable Sonar Pointcloud Generation-->
-      <include file="$(find sonar_testing)/launch/sonar_pointcloud.launch">
+      <!-- <include file="$(find sonar_testing)/launch/sonar_pointcloud.launch">
         <arg name="namespace" value="$(arg namespace)"/>
         <arg name="world_frame" value="world"/>
-      </include>
+      </include> -->
     </group>
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
     <group if="$(arg use_geodetic)">
