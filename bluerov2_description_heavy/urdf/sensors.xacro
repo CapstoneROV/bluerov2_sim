@@ -34,16 +34,16 @@
   <xacro:default_gps namespace="${namespace}" parent_link="${namespace}/base_link" />
 
   <!-- Mount the sonars -->
-	<!-- <xacro:ping360_macro parent_link="${namespace}/base_link" prefix="${namespace}/" namespace="/bluerov2">
-		<origin xyz="0.15 0.1 0.1" rpy="0 0 0"/>
+	<xacro:ping360_macro parent_link="${namespace}/base_link" prefix="${namespace}/" namespace="/bluerov2">
+		<origin xyz="0.15 0.1 0.16" rpy="0 0 0"/>
 		<axis xyz="0 0 1"/>
 	</xacro:ping360_macro>
 	<xacro:mbe_macro parent_link="${namespace}/base_link" prefix="${namespace}/" namespace="/bluerov2">
-    <origin xyz="0.15 -0.1 0.1" rpy="0 0.174533 0"/>
+    <origin xyz="0.15 -0.1 0.16" rpy="0 0.174533 0"/>
     <axis xyz="0 0 1"/>
 	</xacro:mbe_macro>
 	<xacro:ping2_macro parent_link="${namespace}/base_link" prefix="${namespace}/" namespace="/bluerov2">
     <origin xyz="0 0.2 0.05" rpy="0 1.57079632679 0" />
     <axis xyz="0 0 1" />
-	</xacro:ping2_macro> -->
+	</xacro:ping2_macro>
 </robot>
