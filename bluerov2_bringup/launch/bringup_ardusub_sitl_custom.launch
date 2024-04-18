@@ -6,12 +6,15 @@
     <arg name="use_keyboard" default="false" doc="Enable Joystick Support"/>
     <arg name="gazebo" default="true" doc="Enable Gazebo for Camera Visualization (no physics)"/>
     <arg name="mode" default="default" doc="Mode to load into gazebo."/>
+    <arg name="use_mavros" default="true" doc="Enable Mavros for ArduSub"/>
 
-    <group if="$(arg use_keyboard)">
+    <group if="$(arg use_mavros)">
         <include file="$(find bluerov2_ardusub)/launch/start_ardusub_sitl.launch">
             <!-- WE DONT WANT IT TO MODIFY GAZEBO STATE -->
             <arg name="gazebo" value="false"/>
         </include>
+    </group>
+    <group if="$(arg use_keyboard)">
         <include file="$(find bluerov2_control)/launch/keyboard_teleop.launch" /> 
     </group>
 
